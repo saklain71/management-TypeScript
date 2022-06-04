@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 
 const Counter = () => {
 
@@ -12,13 +12,16 @@ const Counter = () => {
     const handeIncrease = ():void =>{
         setCounter(counter + 1);
     }
-    const handleUserSubmit = () =>{
-       // e.preventDefault();
+    const handleUserSubmit = (e:FormEvent<HTMLFormElement>) =>{
+        e.preventDefault();
         const userData = {
             name : ' saklin',
             age : 26
         }
         setUser(userData)
+
+    }
+    const handeNameChange  = (e:ChangeEvent<HTMLInputElement> ):void =>{
 
     }
     
